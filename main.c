@@ -4,6 +4,14 @@
 #define FALSE 0
 #define TRUE 1
 
+void guessNumber(int guess) {
+    if (guess > 555) {
+        printf("Too high.\n");
+    } else if (guess < 555) {
+        printf("Too low.\n");
+    } else { printf("Correct!\n"); }
+}
+
 int main() {
     int a=0, b = 1, c = 2, d = 3, e = 4;
     a = b - c + d * e;
@@ -72,6 +80,10 @@ int main() {
         printf("The average marks obtained in subject %d is: %.2f\n", i, average);
     }
 
-    return 0;
+    guessNumber(500);
+    guessNumber(700);
+    guessNumber(555);
+
     return 0;
 }
+
