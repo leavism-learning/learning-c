@@ -9,7 +9,7 @@ void print_big(int x);
 int runner();
 
 
-int main() {
+int functions_main() {
     printf("%d\n", foo(6));
     int array[] = { 1, 11, 2, 22, 3, 33 };
     int i;
