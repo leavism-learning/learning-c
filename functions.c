@@ -38,3 +38,9 @@ int runner()
     count++;
     return count;
 }
+
+// static functions can only be called inside
+// the file containing it
+static void fun(void) {
+    printf("I am a static function.");
+}
