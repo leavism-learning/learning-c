@@ -6,6 +6,8 @@
 
 int foo(int bar);
 void print_big(int x);
+int runner();
+
 
 int main() {
     printf("%d\n", foo(6));
@@ -14,6 +16,9 @@ int main() {
     for (i = 0; i < 6; i++) {
         print_big(array[i]);
     }
+
+    printf("%d\n", runner());
+    printf("%d\n", runner());
     return 0;
 }
 
@@ -25,4 +30,11 @@ void print_big(int x) {
     if (x > 10) {
         printf("%d is big\n", x);
     }
+}
+
+int runner()
+{
+    static int count = 0;
+    count++;
+    return count;
 }
