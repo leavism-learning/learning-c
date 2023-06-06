@@ -14,5 +14,9 @@ int main() {
     char * name = "John";
     int i;
 
+    for (i = 0; i < 4; i ++) {
+        printf("%c : ", name[i]);
+        printf("%p\n", &name[i]);
+    }
     return 0;
 }
