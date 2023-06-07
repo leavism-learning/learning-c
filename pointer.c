@@ -10,7 +10,7 @@
 // The computer's memory is a sequential store of data,
 // and a pointer points to a specific part of the memory
 
-int main() {
+int pointer_main() {
     char * name = "John";
     int i;
 
