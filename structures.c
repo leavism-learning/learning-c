@@ -1,13 +1,13 @@
 //
 // Created by Huy Dang on 6/5/23.
 //
-struct point {
+typedef struct{
     int x;
     int y;
-};
+} point;
 
 int main() {
-    struct point p;
+    point p;
     p.x = 10;
     p.y = 4;
 }
