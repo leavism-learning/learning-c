@@ -9,7 +9,10 @@ typedef struct {
     int age;
 } person;
 
-
+typedef struct {
+    int x;
+    int y;
+} point;
 
 int main() {
     person * myPerson = (person *) malloc(sizeof(person));
@@ -21,5 +24,14 @@ int main() {
     free(myPerson);
 
 //    printf("Name: %s", myPerson->name);
+
+    point * myPoint = NULL;
+    myPoint = (point *) malloc(sizeof(point));
+
+    myPoint->x = 10;
+    myPoint->y = 5;
+    printf("myPoint Coords: %d, %d\n", myPoint->x, myPoint->y);
+
+    free(myPoint);
     return 0;
 }
