@@ -22,7 +22,7 @@ void move(point * p) {
     (*p).y++;
 }
 
-int main() {
+int reference_main() {
     int val = 0;
     addOne(&val);
     printf("%d\n", val);
