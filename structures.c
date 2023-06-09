@@ -14,7 +14,7 @@ typedef struct {
     int age;
 } person;
 
-int main() {
+int struct_main() {
     point p;
     p.x = 10;
     p.y = 4;
