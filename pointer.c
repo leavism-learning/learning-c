@@ -6,6 +6,7 @@
 // a value, instead of holding the actual value itself
 
 #include <printf.h>
+#include <stdlib.h>
 
 // The computer's memory is a sequential store of data,
 // and a pointer points to a specific part of the memory
@@ -39,6 +40,20 @@ int main() {
 
     for (j = 0; j < 5; j++) {
         printf("vowels[%d]: %c | *(ptr_vowels + %d): %c | *(vowels + %d): %c\n", j, vowels[j], j, *(ptr_vowels + j), j, *(vowels + j));
+    }
+
+    int size = 5;
+    char *malloc_ptr_vowels = (char *) malloc(size * sizeof(char));
+    int k;
+
+    malloc_ptr_vowels[0] = 'A';
+    malloc_ptr_vowels[1] = 'E';
+    *(malloc_ptr_vowels + 2) = 'I';
+    malloc_ptr_vowels[3] = 'O';
+    *(malloc_ptr_vowels + 4) = 'U';
+
+    for(k = 0; k < size; k++) {
+        printf("%c", malloc_ptr_vowels[k]);
     }
 
     return 0;
