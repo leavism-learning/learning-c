@@ -22,7 +22,7 @@ unsigned int factorial(unsigned int x) {
     else { return x * factorial(x-1); }
 }
 
-int main() {
+int recursion_main() {
     printf("3 time 5 is %d\n", multiply(3,5));    int num = 5;
     printf("%d! = %d", num, factorial(num));
 
