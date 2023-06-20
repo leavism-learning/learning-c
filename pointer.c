@@ -10,7 +10,7 @@
 // The computer's memory is a sequential store of data,
 // and a pointer points to a specific part of the memory
 
-int pointer_main() {
+int main() {
     char * name = "John";
     int i;
 
@@ -28,5 +28,18 @@ int pointer_main() {
     if (*pointer_to_n != 11) return 1;
 
     printf("Done!\n");
+
+    char vowels[] = { 'A', 'E', 'I', 'O', 'U'};
+    char * ptr_vowels = vowels;
+    int j;
+
+    for (j = 0; j < 5; j++) {
+        printf("&vowels[%d]: %p | ptr_vowels + %d: %p | vowels + %d: %p\n", j, &vowels[j], j, ptr_vowels + j, j, vowels + j);
+    }
+
+    for (j = 0; j < 5; j++) {
+        printf("vowels[%d]: %c | *(ptr_vowels + %d): %c | *(vowels + %d): %c\n", j, vowels[j], j, *(ptr_vowels + j), j, *(vowels + j));
+    }
+
     return 0;
 }

@@ -14,7 +14,7 @@ typedef struct {
     int y;
 } point;
 
-int main() {
+int malloc_main() {
     person * myPerson = (person *) malloc(sizeof(person));
     myPerson->name = "Huy";
     myPerson->age = 12;
