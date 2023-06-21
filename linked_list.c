@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct {
+typedef struct node {
     int val;
     struct node * next;
 } node;
@@ -12,9 +12,11 @@ typedef struct {
 int main() {
     node * head = NULL;
     head = (node *) malloc(sizeof(node));
-
-    if (head == NULL) { return 1; }
+    head->val = 1;
+    head->next = (node *) malloc(sizeof(node));
     
+    head->next->val = 2;
+    head->next->next = NULL;
 
     return 0;
 }
