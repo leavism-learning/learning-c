@@ -11,6 +11,7 @@ typedef struct node {
 
 void print_list(node * head);
 void push(node * head, int val);
+void push_head(node ** head, int val);
 
 void print_list(node * head) {
     node * current = head;
@@ -28,6 +29,14 @@ void push(node * head, int val) {
     current->next = (node *) malloc(sizeof(node));
     current->next->val = val;
     current->next->next = NULL;
+}
+
+void push_head(node ** head, int val) {
+    node * new_head;
+    new_head = (node *) malloc(sizeof(node));
+    new_head->val = val;
+    new_head->next = *head;
+    *head = new_head;
 }
 
 int main() {
