@@ -12,6 +12,7 @@ typedef struct node {
 void print_list(node * head);
 void push(node * head, int val);
 void push_head(node ** head, int val);
+int pop(node ** head);
 
 void print_list(node * head) {
     node * current = head;
@@ -37,6 +38,20 @@ void push_head(node ** head, int val) {
     new_head->val = val;
     new_head->next = *head;
     *head = new_head;
+}
+
+int pop(node ** head) {
+    int return_val = -1;
+    node * next_node = NULL;
+
+    if (*head == NULL) { return -1; }
+
+    next_node = (*head)->next;
+    return_val = (*head)->val;
+    free(*head);
+    *head = next_node;
+
+    return return_val;
 }
 
 int main() {
