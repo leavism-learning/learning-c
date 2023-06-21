@@ -10,6 +10,7 @@ typedef struct node {
 } node;
 
 void print_list(node * head);
+void push(node * head, int val);
 
 void print_list(node * head) {
     node * current = head;
@@ -17,6 +18,16 @@ void print_list(node * head) {
         printf("%d\n", current->val);
         current = current->next;
     }
+}
+
+void push(node * head, int val) {
+    node * current = head;
+    while (current != NULL) {
+        current = current->next;
+    }
+    current->next = (node *) malloc(sizeof(node));
+    current->next->val = val;
+    current->next->next = NULL;
 }
 
 int main() {
